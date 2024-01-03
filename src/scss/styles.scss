@@ -1,0 +1,29 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+.nav-item{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+.navbar{
+    height: 5rem;
+}
+
+.nav-item{
+    color: orange;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.nav-item:hover{
+    color: red;
+}
+
+
+
