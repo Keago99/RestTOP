@@ -1,26 +1,26 @@
-function loadNavBar(){
-
+function loadhomepage(){
     const content = document.getElementById("content");
-    const navBar = document.createElement("div");
+    const homePageImg = document.createElement("img");
 
-    navBar.classList.add("navbar", "navbar-dark", "bg-dark", "justify-content-center");
+    homePageImg.src = "/images/pizzaSlice.png";
+    homePageImg.alt = "a slice of pixalated pizza";
+    homePageImg.className = "homePizza";
+
+    const homePageHeading = document.createElement("h1");
+    homePageHeading.innerHTML = "Welcome to pepperinos pizza";
+    homePageHeading.className = "homePageHeading";
+
+    const pizzaDesc = document.createElement("div");
+    pizzaDesc.innerHTML = "We hope you enjoy our AUTHENTIC ITALIAN CUSINE!<BR> MAMMA MIA, THAT'S A SPICY MEATABOL";
+    pizzaDesc.className = "homeCopy";
+
+
     
-    // Addinv home to the navbar
-    navBar.innerHTML = ("\
-        <li class=\"nav-item px-3\">\
-        <a class=\"nav-link\" href=\"#\">Home</a>\
-        </li>");
 
-    navBar.innerHTML+= ("\
-        <li class=\"nav-item px-3\">\
-        <a class=\"nav-link\" href=\"#\">Contact</a>\
-        </li>");
-
-
-    
-    content.appendChild(navBar);
-
-    return navBar;
+    content.appendChild(homePageImg);
+    content.appendChild(homePageHeading);
+    content.appendChild(pizzaDesc);
+    return homePageImg;
 }
 
-export default loadNavBar;
+export default loadhomepage;
