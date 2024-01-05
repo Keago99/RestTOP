@@ -1,5 +1,6 @@
 import loadhomepage from "./homepage";
 import loadMenu from "./menu";
+import loadContact from "./contact";
 
 
 function loadNavBar(){
@@ -24,7 +25,7 @@ function loadNavBar(){
 
     navBar.innerHTML+= ("\
         <li class=\"nav-item px-3\">\
-        <a class=\"nav-link\" href=\"#\">Contact</a>\
+        <a class=\"nav-link\" id=\"contactButton\" href=\"#\">Contact</a>\
         </li>");
 
 
@@ -39,6 +40,7 @@ function addEventstoNav(){
     console.log("this is adding eventlisteners!");
     const homeButton = document.getElementById("homeButton");
     const menuButton = document.getElementById("menuButton");
+    const contactButton = document.getElementById("contactButton");
 
     homeButton.addEventListener("click", () => {
         clearPage();
@@ -49,6 +51,11 @@ function addEventstoNav(){
         clearPage();
         loadMenu();
     });
+
+    contactButton.addEventListener("click", () => {
+        clearPage();
+        loadContact();
+    })
 }
 
 function clearPage(){
